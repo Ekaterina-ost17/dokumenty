@@ -156,9 +156,11 @@
   .cover .rule { animation-delay: .46s; }
   .cover .lede { animation-delay: .56s; }
 
+  /* появление только смещением: без opacity, иначе текст невидим там,
+     где анимации не проигрываются — скриншотеры, краулеры превью */
   @keyframes rise {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: none; }
+    from { transform: translateY(14px); }
+    to { transform: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
