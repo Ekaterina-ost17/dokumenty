@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, follow">
+<title>Условия взаимодействия — Екатерина Останина, психолог</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Екатерина Останина · психолог">
+<meta property="og:title" content="Условия взаимодействия — Екатерина Останина, психолог">
+<meta property="og:description" content="Как устроена моя работа: метод, запрос, порядок встреч, конфиденциальность, стоимость, отмены и переносы.">
+<meta property="og:url" content="https://ekaterina-ost17.github.io/dokumenty/uslovija/">
+<meta name="description" content="Как устроена моя работа: метод, запрос, порядок встреч, конфиденциальность, стоимость, отмены и переносы.">
+</head>
+<body>
+<style>
+  :root {
+    --ground: #E4E0D8;
+    --surface: #FCFBF9;
+    --surface-2: #F0EEE8;
+    --ink: #17211F;
+    --ink-soft: #46534F;
+    --muted: #6E7A75;
+    --accent: #1F4E48;
+    --accent-lift: #2F6E66;
+    --accent-soft: #9DBAB4;
+    --rule: #DFDBD2;
+    --flag: #8A4B3C;
+    --on-accent: #F4F2ED;
+    --cover-a: #12312D;
+    --cover-b: #234F49;
+    --cover-c: #3C6E62;
+    --shadow: 0 1px 2px rgba(23, 33, 31, .05), 0 10px 30px -14px rgba(23, 33, 31, .22);
+
+    --serif: Georgia, "Noto Serif", "Droid Serif", "Times New Roman", serif;
+    --sans: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+    --measure: 36rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #101615;
+      --surface: #18201E;
+      --surface-2: #1E2725;
+      --ink: #E3E8E5;
+      --ink-soft: #AFBBB7;
+      --muted: #7F8D88;
+      --accent: #7FB8AF;
+      --accent-lift: #9ACFC6;
+      --accent-soft: #3B5F59;
+      --rule: #28322F;
+      --flag: #D08A7C;
+      --on-accent: #0C1413;
+      --cover-a: #0B1F1D;
+      --cover-b: #143530;
+      --cover-c: #23514A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #101615;
+    --surface: #18201E;
+    --surface-2: #1E2725;
+    --ink: #E3E8E5;
+    --ink-soft: #AFBBB7;
+    --muted: #7F8D88;
+    --accent: #7FB8AF;
+    --accent-lift: #9ACFC6;
+    --accent-soft: #3B5F59;
+    --rule: #28322F;
+    --flag: #D08A7C;
+    --on-accent: #0C1413;
+    --cover-a: #0B1F1D;
+    --cover-b: #143530;
+    --cover-c: #23514A;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  :root[data-theme="light"] {
+    --ground: #E4E0D8;
+    --surface: #FCFBF9;
+    --surface-2: #F0EEE8;
+    --ink: #17211F;
+    --ink-soft: #46534F;
+    --muted: #6E7A75;
+    --accent: #1F4E48;
+    --accent-lift: #2F6E66;
+    --accent-soft: #9DBAB4;
+    --rule: #DFDBD2;
+    --flag: #8A4B3C;
+    --on-accent: #F4F2ED;
+    --cover-a: #12312D;
+    --cover-b: #234F49;
+    --cover-c: #3C6E62;
+    --shadow: 0 1px 2px rgba(23, 33, 31, .04), 0 8px 24px -12px rgba(23, 33, 31, .16);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── полоса прогресса чтения ── */
+
+  .progress {
+    position: fixed;
+    inset: 0 auto auto 0;
+    height: 2px;
+    width: 0;
+    background: var(--accent-lift);
+    z-index: 50;
+    transition: width .1s linear;
+  }
+
+  /* ── обложка ── */
+
+  .cover {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--cover-a);
+    color: var(--on-accent);
+    padding: clamp(4rem, 16vh, 9rem) 1.5rem clamp(3rem, 10vh, 5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.1rem;
+  }
+
+  :root[data-theme="dark"] .cover,
+  .cover { color: #F4F2ED; }
+
+  .cover canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .cover > *:not(canvas) {
+    animation: rise .9s cubic-bezier(.16, .8, .3, 1) both;
+  }
+
+  .cover .kicker { animation-delay: .05s; }
+  .cover h1 { animation-delay: .18s; }
+  .cover .who { animation-delay: .34s; }
+  .cover .rule { animation-delay: .46s; }
+  .cover .lede { animation-delay: .56s; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cover > *:not(canvas) { animation: none; }
+  }
+
+  .cover .kicker {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+
+  .cover h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.3rem, 9vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+    max-width: 16ch;
+  }
+
+  .cover .who {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    opacity: 0.85;
+  }
+
+  .cover .who b { font-weight: 600; }
+
+  .cover .rule {
+    width: 2.5rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.4;
+    margin: 0.4rem 0;
+  }
+
+  .cover .lede {
+    max-width: 30rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.88;
+    text-wrap: pretty;
+  }
+
+  .cover .edition {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    opacity: 0.58;
+    margin-top: 0.5rem;
+    animation-delay: .66s;
+  }
+
+  /* ── каркас ── */
+
+  .shell {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 4.5rem) 1.4rem 4rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 62rem) {
+    .shell {
+      grid-template-columns: 13rem minmax(0, 1fr);
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
+  /* ── навигация ── */
+
+  .rail {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+  }
+
+  @media (min-width: 62rem) {
+    .rail {
+      position: sticky;
+      top: 2.5rem;
+    }
+  }
+
+  .rail .rail-title {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+  }
+
+  .rail ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1rem;
+  }
+
+  @media (min-width: 62rem) {
+    .rail ul {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0.62rem;
+    }
+  }
+
+  .rail a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    transition: color .18s ease;
+  }
+
+  .rail a:hover,
+  .rail a:focus-visible { color: var(--accent-lift); }
+
+  .rail a[aria-current="true"] {
+    color: var(--accent-lift);
+    font-weight: 600;
+  }
+
+  /* ── содержимое ── */
+
+  .doc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: var(--measure);
+    min-width: 0;
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: clamp(1.5rem, 4vw, 2.2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    scroll-margin-top: 1.5rem;
+    min-width: 0;
+  }
+
+  .card {
+    animation: rise .7s cubic-bezier(.16, .8, .3, 1) both;
+  }
+
+  .card:nth-child(1) { animation-delay: .05s; }
+  .card:nth-child(2) { animation-delay: .12s; }
+  .card:nth-child(3) { animation-delay: .19s; }
+  .card:nth-child(4) { animation-delay: .26s; }
+  .card:nth-child(5) { animation-delay: .33s; }
+  .card:nth-child(n+6) { animation-delay: .4s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card { animation: none; }
+    .progress { transition: none; }
+  }
+
+  .card > h2 {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .card > h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .card > h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-wrap: balance;
+    margin-top: 0.35rem;
+  }
+
+  p { text-wrap: pretty; }
+
+  em.q { font-style: italic; color: var(--ink-soft); }
+
+  .card a {
+    color: var(--accent-lift);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+
+  .card a:hover,
+  .card a:focus-visible { border-bottom-width: 2px; }
+
+  /* ── списки ── */
+
+  ul.plain {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  ul.plain > li {
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  ul.plain > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.45rem;
+    height: 0.45rem;
+    border: 1px solid var(--accent-soft);
+    border-radius: 50%;
+  }
+
+  ul.plain > li > b {
+    font-family: var(--sans);
+    font-size: 0.87rem;
+    font-weight: 600;
+    display: block;
+    color: var(--ink);
+  }
+
+  /* ── шаги ── */
+
+  ol.steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    counter-reset: step;
+  }
+
+  ol.steps > li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0 0.85rem;
+  }
+
+  ol.steps > li::before {
+    content: counter(step);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--on-accent);
+    background: var(--accent);
+    width: 1.75rem;
+    height: 1.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin-top: 0.1rem;
+  }
+
+  ol.steps > li > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  /* ── выноски ── */
+
+  .note {
+    background: var(--surface-2);
+    border-left: 2px solid var(--accent-soft);
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .note .label {
+    font-family: var(--sans);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--flag);
+  }
+
+  /* ── таблицы ── */
+
+  .scroller { overflow-x: auto; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 0.87rem;
+    min-width: 18rem;
+  }
+
+  th {
+    text-align: left;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 0.75rem 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: bottom;
+  }
+
+  td {
+    padding: 0.65rem 0.75rem 0.65rem 0;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  td.num {
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    width: 2rem;
+  }
+
+  /* ── цена ── */
+
+  .price {
+    background: var(--surface-2);
+    border-radius: 3px;
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+  }
+
+  .price .amount {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1;
+    font-variant-numeric: lining-nums tabular-nums;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+
+  .price .unit {
+    font-family: var(--sans);
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+
+  /* ── согласие ── */
+
+  .consent {
+    background: var(--accent);
+    color: var(--on-accent);
+    border-radius: 3px;
+    padding: clamp(1.6rem, 5vw, 2.4rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    box-shadow: var(--shadow);
+  }
+
+  .consent .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+
+  .consent p { font-size: 1.06rem; }
+
+  .consent strong { font-weight: 700; }
+
+  /* ── подвал ── */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding-top: 1.4rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  footer .ftitle {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+
+  footer a {
+    color: var(--accent-lift);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+
+  footer a:hover,
+  footer a:focus-visible { border-bottom-width: 2px; }
+
+  .updated {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.7rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-lift);
+    outline-offset: 3px;
+  }
+</style>
+
+<div class="progress" id="progress"></div>
+
+<header class="cover">
+  <canvas id="haze" aria-hidden="true"></canvas>
+  <div class="kicker">Условия взаимодействия</div>
+  <h1>Как устроена моя работа</h1>
+  <div class="who"><b>Екатерина Останина</b> · психолог</div>
+  <div class="rule"></div>
+  <p class="lede">Этот документ структурирует ожидания от нашего взаимодействия. Прочитайте его целиком до начала работы — здесь описано всё, что важно знать заранее.</p>
+  <div class="edition">Актуальная редакция · 15 сентября 2026 года</div>
+</header>
+
+<div class="shell">
+
+  <nav class="rail" aria-label="Разделы">
+    <div class="rail-title">Разделы</div>
+    <ul>
+      <li><a href="#metod">Метод</a></li>
+      <li><a href="#zapros">Запрос</a></li>
+      <li><a href="#temy">Темы работы</a></li>
+      <li><a href="#poryadok">Порядок работы</a></li>
+      <li><a href="#mezhdu">Между сессиями</a></li>
+      <li><a href="#konfid">Конфиденциальность</a></li>
+      <li><a href="#granicy">С кем я не работаю</a></li>
+      <li><a href="#stoimost">Формат и стоимость</a></li>
+      <li><a href="#otmeny">Отмены и переносы</a></li>
+      <li><a href="#vazhnoe">Перед началом</a></li>
+      <li><a href="#dokumenty">Документы</a></li>
+    </ul>
+  </nav>
+
+  <main class="doc">
+
+    <section class="card" id="metod">
+      <h2>Метод</h2>
+      <p>Основная идея моего подхода в том, что изначально вы в порядке, а проблемы возникают из-за неправильного восприятия себя. Часто мы сравниваем себя с идеалами или чужими ожиданиями, и это приводит к искажённому образу себя и внутренним блокам. Моя задача — помочь вам понять и принять себя настоящего, чтобы в жизни происходили положительные перемены.</p>
+
+      <h3>Что я для этого делаю</h3>
+      <ul class="plain">
+        <li><b>Работа с внутренними образами и убеждениями</b>Помогает изменить негативные представления о себе и сформировать более сильное восприятие, в котором вы чувствуете себя уверенно и полноценно.</li>
+        <li><b>Безопасное пространство для честного самовыражения</b>Помогает развивать любовь и принятие себя — важные шаги к внутренней гармонии.</li>
+        <li><b>Укрепление уверенности и веры в собственные силы</b>Ускоряет изменения и помогает брать ответственность за свою жизнь.</li>
+      </ul>
+
+      <h3>Дополнительно я использую проверенные терапевтические методы</h3>
+      <ul class="plain">
+        <li><b>КПТ и схематерапия</b>Помогают выйти из автоматических негативных мыслей и выработать новые, полезные стратегии поведения.</li>
+        <li><b>Практики осознанности и медитации</b>Помогают лучше чувствовать свои эмоции, развивать внутреннее спокойствие и связь с телом.</li>
+        <li><b>Телесная терапия</b>Помогает освободиться от эмоциональных блоков и психосоматических проявлений.</li>
+      </ul>
+
+      <p>Все эти инструменты помогают понять себя по-новому, снизить внутренний конфликт и изменить свою жизнь к лучшему. Вместе мы пошагово реализуем эти перемены, делая их частью вашей повседневной жизни.</p>
+    </section>
+
+    <section class="card" id="zapros">
+      <h2>Запрос</h2>
+      <p>От того, как сформулирован запрос, напрямую зависит результат работы. Вот критерии, которые делают запрос рабочим.</p>
+
+      <ul class="plain">
+        <li><b>Конкретность и ясность</b>Опишите проблему или ситуацию максимально точно. Например: <em class="q">«Я испытываю тревогу перед публичными выступлениями»</em> вместо <em class="q">«Мне плохо»</em>.</li>
+        <li><b>Осознание своих целей</b>Чётко сформулируйте, чего хотите добиться: <em class="q">«Хочу научиться управлять тревогой»</em>, <em class="q">«Мне важно улучшить отношения с партнёром»</em>.</li>
+        <li><b>Объективность и честность</b>Будьте искренними и открытыми, не стесняйтесь рассказывать о своих чувствах, мыслях и опыте.</li>
+        <li><b>Важность вопроса</b>Обоснуйте, почему для вас важна эта тема и какую роль она играет в вашей жизни.</li>
+        <li><b>Готовность к работе и переменам</b>Покажите, что вы готовы участвовать в процессе, выполнять рекомендации и работать над собой.</li>
+        <li><b>Время и ресурсы</b>Обратите внимание на доступное вам время для встреч, ограничения и предпочтения по формату работы.</li>
+        <li><b>Конкретная область</b>Если есть определённые сферы — стресс, отношения, самооценка — укажите их.</li>
+      </ul>
+
+      <div class="note">
+        <div class="label">Пример рабочего запроса</div>
+        <p>«Я часто испытываю тревогу перед собеседованиями, она мешает мне раскрыться и показать свои сильные стороны. Хотел бы научиться управлять этим состоянием, повысить уверенность и подготовиться к важным встречам».</p>
+      </div>
+    </section>
+
+    <section class="card" id="temy">
+      <h2>Темы, с которыми я работаю</h2>
+      <ul class="plain">
+        <li><b>Эмоциональный баланс</b>Превращение тревоги, неуверенности и других ограничивающих состояний в ресурсные переживания и устойчивость.</li>
+        <li><b>Гармоничные отношения</b>Выход из повторяющихся сценариев, создание здоровых границ и глубокой связи с партнёром, детьми, родителями и коллегами.</li>
+        <li><b>Физическое здоровье</b>Работа с психосоматическими состояниями через изменение телесных паттернов и восстановление баланса.</li>
+        <li><b>Финансовое благополучие</b>Трансформация блоков и убеждений, ограничивающих ваш доход и отношения с деньгами.</li>
+        <li><b>Самореализация</b>Раскрытие потенциала, преодоление внутренних барьеров и движение к значимым целям.</li>
+      </ul>
+
+      <div class="note">
+        <div class="label">Запросы, с которыми я не смогу работать</div>
+        <p>Направленные на изменение третьих лиц — <em class="q">«хочу, чтобы партнёр вёл себя так, как я хочу»</em>. Оформленные через отрицание — <em class="q">«не хочу жить так, как живу»</em>. Не имеющие конкретного и измеримого результата — <em class="q">«хочу жить хорошо»</em>.</p>
+      </div>
+    </section>
+
+    <section class="card" id="poryadok">
+      <h2>Порядок взаимодействия</h2>
+
+      <div class="note">
+        <div class="label">Важно</div>
+        <p>Терапевтическое взаимодействие исключает двойные отношения: параллельно мы не развиваем дружеские, романтические и любые другие отношения.</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <p>Сначала мы общаемся в переписке. Вы описываете проблему и желаемое решение, вместе формируем запрос, обсуждаем правила терапии и её формат.</p>
+            <p>До первой встречи я предлагаю составить аудит актуальных проблем и прошкалировать их по степени заряженности от 1 до 10.</p>
+            <div class="scroller">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Формулировка проблемы</th>
+                    <th>Дискомфорт<br>1–10</th>
+                    <th>Желаемое решение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="num">1</td><td></td><td></td><td></td></tr>
+                  <tr><td class="num">2</td><td></td><td></td><td></td></tr>
+                  <tr><td class="num">3</td><td></td><td></td><td></td></tr>
+                  <tr><td class="num">4</td><td></td><td></td><td></td></tr>
+                  <tr><td class="num">5</td><td></td><td></td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Согласовываем время и частоту встреч. Отдельным сообщением я оставляю реквизиты для оплаты.</p>
+            <p>На первой сессии происходит детальное погружение в контекст вашей жизни и сбор данных для исследования. Там же обсуждаем стратегию сессий и план дальнейшей работы — при необходимости его можно корректировать в процессе.</p>
+            <p>В конце встречи предпочтительно, чтобы домашнее задание вы записали сами — своими словами и своей рукой. А вместе с ним то главное, что запомнилось и откликнулось за встречу.</p>
+            <p>Это не формальность. Если сказанное получается передать своими словами, значит, оно понято и присвоено. А записанное своей рукой работает совсем иначе, чем прочитанное в чужом файле.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>После встречи я веду краткую рабочую запись: что мы делали, к чему пришли и куда двигаемся дальше. Она нужна, чтобы даже после перерыва можно было вернуться к намеченному плану.</p>
+            <p>В записях я обозначаю клиентов символами и не использую имена — это часть конфиденциальности.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card" id="mezhdu">
+      <h2>Между сессиями</h2>
+
+      <p>Между встречами я на связи по организационным вопросам: время, перенос, отмена, оплата. Консультаций в переписке я не провожу.</p>
+
+      <p>Обычно то, что поднимается между встречами, никуда не пропадает. Состояния сменяют друг друга, мысли приходят и уходят, а то, что действительно важно, к встрече остаётся — с него мы и начинаем.</p>
+
+      <p>Время следующей встречи мы назначаем тогда, когда вы к ней готовы, — достаточно написать мне.</p>
+    </section>
+
+    <section class="card" id="konfid">
+      <h2>Конфиденциальность</h2>
+      <p>Я регулярно обращаюсь за супервизией, где могу обсуждать трудности, возникшие у меня в процессе работы. При этом я не разглашаю подробности о личности и проблеме клиента, по которым его можно узнать.</p>
+      <div class="note">
+        <div class="label">Исключения</div>
+        <p>Суицидальный риск и информация о совершённых или планируемых уголовных преступлениях. При наличии суицидальных мыслей заключается другой контракт. Под уголовными преступлениями я подразумеваю темы, связанные с лишением жизни и свободы других людей.</p>
+      </div>
+    </section>
+
+    <section class="card" id="granicy">
+      <h2>Кому я не смогу помочь</h2>
+      <ul class="plain">
+        <li><b>Людям с активной зависимостью от алкоголя или наркотиков</b>Если человек находится в трезвости менее шести месяцев, моя работа будет неэффективна: психологические изменения возможны только при стабильной трезвости. Исключение — кофеин, никотин и препараты, назначенные врачом в строгих дозировках.</li>
+        <li><b>Людям в перманентном состоянии жертвы</b>Тем, кто на постоянной основе винит в своих бедах других и не допускает мысли, что причиной следствий в его жизни может быть он сам.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="stoimost">
+      <h2>Формат и стоимость</h2>
+
+      <div class="price">
+        <div class="amount">5 000 ₽</div>
+        <div class="unit">консультация 60 минут</div>
+      </div>
+
+      <ul class="plain">
+        <li><b>Формат</b>Чаще всего онлайн, в Zoom, с включённой камерой.</li>
+        <li><b>Оплата</b>Не позднее чем за 24 часа до начала консультации.</li>
+        <li><b>Периодичность</b>Согласовывается индивидуально. Практика показывает, что наибольшей эффективностью обладают регулярные встречи в одно и то же время.</li>
+      </ul>
+
+      <p>Я работаю как самозанятая и выдаю чек за каждую оплату.</p>
+      <p>Стоимость может измениться — об этом я предупреждаю не менее чем за 30 дней до вступления новых условий в силу.</p>
+      <p>Тем, кто начал работу раньше, до 15 октября 2026 года консультация обходится в прежние 4 000 ₽.</p>
+    </section>
+
+    <section class="card" id="otmeny">
+      <h2>Отмены, переносы, опоздания</h2>
+
+      <div class="scroller">
+        <table>
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Что происходит</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Отмена или перенос за 24 часа и раньше</td>
+              <td>Свободно, без последствий</td>
+            </tr>
+            <tr>
+              <td>Отмена, перенос позднее 24 часов или неявка</td>
+              <td>Оплата сессии сгорает</td>
+            </tr>
+            <tr>
+              <td>Клиент опаздывает</td>
+              <td>Время консультации сокращается на время опоздания</td>
+            </tr>
+            <tr>
+              <td>Клиент опаздывает более чем на 20 минут</td>
+              <td>Сессия сгорает</td>
+            </tr>
+            <tr>
+              <td>Я не прихожу на встречу</td>
+              <td>Следующая консультация проводится бесплатно</td>
+            </tr>
+            <tr>
+              <td>Я опаздываю</td>
+              <td>Время продлевается, а если такой возможности нет — стоимость следующей консультации снижается пропорционально опозданию</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Сгорание оплаты при поздней отмене связано не со штрафом как таковым, а с предотвращением бессознательного сопротивления и поддержанием устойчивых границ работы.</p>
+    </section>
+
+    <section class="card" id="vazhnoe">
+      <h2>Перед началом работы</h2>
+      <ul class="plain">
+        <li><b>Правило 48 часов</b>В течение двух суток после консультации стоит воздержаться от решений и поступков, которые могут серьёзно изменить вашу жизнь.</li>
+        <li><b>Говорите мне о своих состояниях на сессии</b>О трудностях и чувствах, возникающих в процессе. Это ключевой момент взаимодействия: их озвучивание и обсуждение существенно помогают продвинуться вперёд — и место для этого именно встреча.</li>
+        <li><b>Отзывы</b>Если вы оставите отзыв о работе, я могу опубликовать его без вашего имени и без деталей, по которым вас можно узнать. С именем — только если вы отдельно разрешите. Попросить снять отзыв можно в любой момент.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="dokumenty">
+      <h2>Документы</h2>
+      <p>Кроме этой страницы есть ещё два документа. Они короче, чем кажется, и оба стоит открыть до первой встречи.</p>
+      <ul class="plain">
+        <li><b><a href="https://ekaterina-ost17.github.io/dokumenty/oferta/">Договор-оферта</a></b>Юридическая сторона: что именно я оказываю, сколько это стоит, что происходит при отмене, за что я отвечаю, а за что нет.</li>
+        <li><b><a href="https://ekaterina-ost17.github.io/dokumenty/soglasie/">Согласие на обработку персональных данных</a></b>Какие ваши данные я обрабатываю, зачем, где они хранятся, сколько и как отозвать согласие. Отдельный документ, потому что сведения о психологическом состоянии закон охраняет строже обычных.</li>
+      </ul>
+    </section>
+
+    <div class="consent" id="soglasie">
+      <div class="label">Подтверждение</div>
+      <p>Если всё понятно и вы согласны — просто напишите мне в ответ <strong>«Согласен»</strong> или <strong>«Согласна»</strong>. После этого мы согласуем время первой встречи.</p>
+    </div>
+
+    <footer>
+      <div class="ftitle">Связь со мной</div>
+      <div><a href="https://t.me/ostanina_ekaterina">@ostanina_ekaterina</a> — личные сообщения</div>
+      <div><a href="https://t.me/ekaterina_ostanina">@ekaterina_ostanina</a> — мой канал в Телеграм</div>
+      <div class="updated">Актуальная редакция от 15 сентября 2026 года. Заменяет редакцию от 26 июля 2026 года.</div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* прогресс чтения */
+  var bar = document.getElementById("progress");
+  function tick() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = Math.min(100, Math.max(0, p)) + "%";
+  }
+  window.addEventListener("scroll", tick, { passive: true });
+  window.addEventListener("resize", tick);
+  tick();
+
+  /* активный раздел в навигации */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".rail a"));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  function mark() {
+    var best = 0;
+    for (var i = 0; i < targets.length; i++) {
+      if (targets[i] && targets[i].getBoundingClientRect().top < window.innerHeight * 0.35) best = i;
+    }
+    links.forEach(function (a, i) {
+      if (i === best) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  }
+  window.addEventListener("scroll", mark, { passive: true });
+  mark();
+
+  /* обложка: медленно дышащие линии */
+  var cv = document.getElementById("haze");
+  if (cv && cv.getContext) {
+    var ctx = cv.getContext("2d");
+    var dpr = 1;
+
+    function css(name) {
+      return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    }
+    function hex2rgb(h) {
+      h = (h || "#234F49").replace("#", "");
+      if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+      var n = parseInt(h, 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.max(1, cv.offsetWidth * dpr);
+      cv.height = Math.max(1, cv.offsetHeight * dpr);
+    }
+
+    function draw(time) {
+      var w = cv.width, h = cv.height;
+      var t = time * 0.00013;
+
+      var bg = ctx.createLinearGradient(0, 0, w * 0.35, h);
+      bg.addColorStop(0, css("--cover-a") || "#12312D");
+      bg.addColorStop(1, css("--cover-b") || "#234F49");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, w, h);
+
+      var glow = hex2rgb(css("--cover-c") || "#3C6E62");
+      var gx = w * (0.5 + Math.sin(t * 0.6) * 0.16);
+      var gy = h * (0.42 + Math.cos(t * 0.45) * 0.14);
+      var gr = Math.max(w, h) * 0.55;
+      var rg = ctx.createRadialGradient(gx, gy, 0, gx, gy, gr);
+      rg.addColorStop(0, "rgba(" + glow[0] + "," + glow[1] + "," + glow[2] + ",0.55)");
+      rg.addColorStop(1, "rgba(" + glow[0] + "," + glow[1] + "," + glow[2] + ",0)");
+      ctx.fillStyle = rg;
+      ctx.fillRect(0, 0, w, h);
+
+      var lines = 34;
+      var amp = h * 0.075;
+      ctx.lineWidth = Math.max(1, dpr * 0.85);
+
+      for (var i = 0; i < lines; i++) {
+        var p = i / (lines - 1);
+        var baseY = h * (0.10 + p * 0.86);
+        var fade = Math.sin(p * Math.PI);
+        ctx.strokeStyle = "rgba(214, 236, 230," + (0.045 + fade * 0.11) + ")";
+        ctx.beginPath();
+        for (var x = 0; x <= w; x += 12 * dpr) {
+          var n = x / w;
+          var y = baseY
+            + Math.sin(n * 3.1 + t * 1.15 + p * 2.4) * amp * (0.45 + fade * 0.75)
+            + Math.sin(n * 6.7 - t * 0.75 + p * 4.1) * amp * 0.22;
+          if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+
+      var vg = ctx.createLinearGradient(0, 0, 0, h);
+      vg.addColorStop(0, "rgba(0,0,0,0.28)");
+      vg.addColorStop(0.45, "rgba(0,0,0,0.05)");
+      vg.addColorStop(1, "rgba(0,0,0,0.42)");
+      ctx.fillStyle = vg;
+      ctx.fillRect(0, 0, w, h);
+    }
+
+    size();
+    if (reduce) {
+      draw(3000);
+    } else {
+      var raf = function (t) { draw(t); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }
+    window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  }
+</script>
+</body>
+</html>

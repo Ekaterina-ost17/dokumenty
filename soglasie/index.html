@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, follow">
+<title>Согласие на обработку персональных данных — Е. С. Останина, психолог</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Екатерина Останина · психолог">
+<meta property="og:title" content="Согласие на обработку персональных данных — Е. С. Останина">
+<meta property="og:description" content="Какие данные я обрабатываю, зачем, где они хранятся, сколько и как отозвать согласие.">
+<meta property="og:url" content="https://ekaterina-ost17.github.io/dokumenty/soglasie/">
+<meta name="description" content="Какие данные я обрабатываю, зачем, где они хранятся, сколько и как отозвать согласие.">
+</head>
+<body>
+<style>
+  :root {
+    --ground: #E4E0D8;
+    --surface: #FCFBF9;
+    --surface-2: #F0EEE8;
+    --ink: #17211F;
+    --ink-soft: #46534F;
+    --muted: #6E7A75;
+    --accent: #1F4E48;
+    --accent-lift: #2F6E66;
+    --accent-soft: #9DBAB4;
+    --rule: #DFDBD2;
+    --flag: #8A4B3C;
+    --on-accent: #F4F2ED;
+    --cover-a: #12312D;
+    --cover-b: #23514A;
+    --shadow: 0 1px 2px rgba(23, 33, 31, .05), 0 10px 30px -14px rgba(23, 33, 31, .22);
+
+    --serif: Georgia, "Noto Serif", "Droid Serif", "Times New Roman", serif;
+    --sans: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --measure: 38rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #101615; --surface: #18201E; --surface-2: #1E2725;
+      --ink: #E3E8E5; --ink-soft: #AFBBB7; --muted: #7F8D88;
+      --accent: #7FB8AF; --accent-lift: #9ACFC6; --accent-soft: #3B5F59;
+      --rule: #28322F; --flag: #D08A7C; --on-accent: #0C1413;
+      --cover-a: #0B1F1D; --cover-b: #143530;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #101615; --surface: #18201E; --surface-2: #1E2725;
+    --ink: #E3E8E5; --ink-soft: #AFBBB7; --muted: #7F8D88;
+    --accent: #7FB8AF; --accent-lift: #9ACFC6; --accent-soft: #3B5F59;
+    --rule: #28322F; --flag: #D08A7C; --on-accent: #0C1413;
+    --cover-a: #0B1F1D; --cover-b: #143530;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  :root[data-theme="light"] {
+    --ground: #E4E0D8; --surface: #FCFBF9; --surface-2: #F0EEE8;
+    --ink: #17211F; --ink-soft: #46534F; --muted: #6E7A75;
+    --accent: #1F4E48; --accent-lift: #2F6E66; --accent-soft: #9DBAB4;
+    --rule: #DFDBD2; --flag: #8A4B3C; --on-accent: #F4F2ED;
+    --cover-a: #12312D; --cover-b: #23514A;
+    --shadow: 0 1px 2px rgba(23, 33, 31, .05), 0 10px 30px -14px rgba(23, 33, 31, .22);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .cover {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--cover-a);
+    color: #F4F2ED;
+    padding: clamp(2.6rem, 9vw, 4.5rem) 1.4rem clamp(2.2rem, 6vw, 3rem);
+  }
+
+  .cover canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .cover-in {
+    max-width: var(--measure);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .kicker {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+
+  .cover h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.7rem, 5.5vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+
+  .cover .who {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    opacity: 0.85;
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 3.2rem) 1.4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    min-width: 0;
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: clamp(1.4rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+
+  .card > h2 {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .card > h2 .n {
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+  }
+
+  p { text-wrap: pretty; }
+
+  .card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .card ul > li {
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .card ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.4rem;
+    height: 1px;
+    background: var(--accent-soft);
+  }
+
+  .note {
+    background: var(--surface-2);
+    border-left: 2px solid var(--accent-soft);
+    padding: 0.95rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .note .label {
+    font-family: var(--sans);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--flag);
+  }
+
+  .req div {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 0.5rem;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .req dt { color: var(--muted); font-size: 0.86rem; }
+  .req dd { color: var(--ink); }
+
+  .card a {
+    color: var(--accent-lift);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+
+  .card a:hover, .card a:focus-visible { border-bottom-width: 2px; }
+
+  .final {
+    background: var(--accent);
+    color: var(--on-accent);
+    border-radius: 3px;
+    padding: clamp(1.4rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    box-shadow: var(--shadow);
+  }
+
+  .final .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+
+  .final a { color: inherit; }
+
+  .meta {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-lift);
+    outline-offset: 3px;
+  }
+</style>
+
+<header class="cover">
+  <canvas id="haze" aria-hidden="true"></canvas>
+  <div class="cover-in">
+    <div class="kicker">Форма согласия</div>
+    <h1>Согласие на обработку персональных данных</h1>
+    <div class="who">включая специальные категории · Редакция от 23 июля 2026 года</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="card">
+    <h2><span class="n">1</span> Кто обрабатывает данные</h2>
+    <div class="req">
+      <div><dt>Оператор</dt><dd>Останина Екатерина Сергеевна, самозанятая</dd></div>
+      <div><dt>ИНН</dt><dd>501811354006</dd></div>
+      <div><dt>Почта</dt><dd><a href="mailto:ekaterina_ost@list.ru">ekaterina_ost@list.ru</a></dd></div>
+    </div>
+    <p>Согласие даётся по Федеральному закону от 27.07.2006 № 152-ФЗ в связи с оказанием вам психологических консультаций на условиях <a href="https://ekaterina-ost17.github.io/dokumenty/oferta/">оферты</a>.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="n">2</span> Какие данные</h2>
+    <p><b>Обычные:</b> имя, возраст, телефон, электронная почта, имя пользователя в мессенджере, сведения об оплате.</p>
+    <p><b>Специальные категории:</b> сведения о вашем психологическом и эмоциональном состоянии, о здоровье, если вы сообщаете их добровольно, а также об обстоятельствах вашей жизни, которые вы рассказываете на консультациях.</p>
+
+    <div class="note">
+      <div class="label">Почему отдельный документ</div>
+      <p>Сведения о состоянии психики и здоровья закон охраняет строже обычных данных: обрабатывать их можно только с отдельного согласия. Поэтому эта форма существует отдельно от договора.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="n">3</span> Зачем и что с ними происходит</h2>
+    <ul>
+      <li>Оказание консультаций: понимание запроса, выбор методов, планирование работы.</li>
+      <li>Связь с вами: согласование встреч, напоминания, организационные сообщения.</li>
+      <li>Приём оплаты и формирование чеков по Федеральному закону от 27.11.2018 № 422-ФЗ.</li>
+    </ul>
+    <p>Действия с данными: сбор, хранение, использование, обезличивание, удаление. Ваши данные живут в переписке в Telegram и в сведениях об оплате. Отдельной картотеки клиентов Оператор не ведёт, аудио- и видеозапись консультаций не производится. Рабочие заметки о ходе работы ведутся обезличенно — без имени и сведений, по которым вас можно определить.</p>
+    <p>Для консультаций используется сервис видеосвязи Zoom, для переписки — Telegram; передача данных им происходит в объёме, необходимом для связи.</p>
+    <p>Данные не используются в рекламе, не передаются третьим лицам и не продаются.</p>
+    <p><b>Отзывы.</b> Если вы оставите отзыв о работе, я могу опубликовать его текст — на своём сайте, в канале или в социальных сетях — <b>без вашего имени</b> и без деталей, по которым вас можно узнать. С указанием имени отзыв публикуется, только если вы отдельно это разрешите. В любой момент вы можете попросить снять отзыв с публикации.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="n">4</span> Конфиденциальность</h2>
+    <p>Оператор не разглашает ставшие известными сведения и сам факт вашего обращения. Профессиональные трудности могут обсуждаться на супервизии обезличенно — без сведений, по которым вас можно узнать.</p>
+    <p>Исключения: суицидальный риск, сведения о преступлениях против жизни и свободы других людей, а также случаи, прямо предусмотренные законом.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="n">5</span> Сроки и отзыв согласия</h2>
+    <ul>
+      <li>Согласие действует до достижения целей обработки, но не более трёх лет с даты последней консультации.</li>
+      <li>Отозвать его можно в любой момент — письмом на <a href="mailto:ekaterina_ost@list.ru">ekaterina_ost@list.ru</a> или сообщением в Telegram.</li>
+      <li>После отзыва обработка прекращается, данные удаляются в срок не более 30 дней.</li>
+      <li>Отзыв означает, что работа дальше невозможна: консультировать без этих данных нельзя.</li>
+      <li>Вы вправе узнать, какие ваши данные обрабатываются, и потребовать их уточнения или удаления.</li>
+    </ul>
+  </section>
+
+  <div class="final">
+    <div class="label">Как дать согласие</div>
+    <p>Напишите в ответ на сообщение со ссылкой одно слово — «Согласен» или «Согласна». Дата и время фиксируются в переписке автоматически.</p>
+  </div>
+
+  <div class="meta">Редакция от 23 июля 2026 года</div>
+
+</div>
+
+<script>
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cv = document.getElementById("haze");
+  if (cv && cv.getContext) {
+    var ctx = cv.getContext("2d");
+    var dpr = 1;
+    function css(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.max(1, cv.offsetWidth * dpr);
+      cv.height = Math.max(1, cv.offsetHeight * dpr);
+    }
+    function draw(time) {
+      var w = cv.width, h = cv.height, t = time * 0.00013;
+      var bg = ctx.createLinearGradient(0, 0, w * 0.35, h);
+      bg.addColorStop(0, css("--cover-a") || "#12312D");
+      bg.addColorStop(1, css("--cover-b") || "#23514A");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, w, h);
+      var lines = 22, amp = h * 0.10;
+      ctx.lineWidth = Math.max(1, dpr * 0.85);
+      for (var i = 0; i < lines; i++) {
+        var p = i / (lines - 1);
+        var baseY = h * (0.08 + p * 0.9);
+        var fade = Math.sin(p * Math.PI);
+        ctx.strokeStyle = "rgba(214,236,230," + (0.04 + fade * 0.09) + ")";
+        ctx.beginPath();
+        for (var x = 0; x <= w; x += 12 * dpr) {
+          var n = x / w;
+          var y = baseY
+            + Math.sin(n * 3.1 + t * 1.15 + p * 2.4) * amp * (0.45 + fade * 0.75)
+            + Math.sin(n * 6.7 - t * 0.75 + p * 4.1) * amp * 0.22;
+          if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+      var vg = ctx.createLinearGradient(0, 0, 0, h);
+      vg.addColorStop(0, "rgba(0,0,0,0.22)");
+      vg.addColorStop(1, "rgba(0,0,0,0.34)");
+      ctx.fillStyle = vg;
+      ctx.fillRect(0, 0, w, h);
+    }
+    size();
+    if (reduce) { draw(3000); }
+    else { var raf = function (t) { draw(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
+    window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  }
+</script>
+</body>
+</html>
